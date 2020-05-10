@@ -4,6 +4,9 @@ const port = process.env.PORT || 3000;
 const app = express();
 const mongoose = require('mongoose');
 const to = require('await-to-js').default;
+const bodyParser = require('body-parser');
+
+app.use(bodyParser());
 
 mongoose.connect(`mongodb+srv://paranoia:${process.env.DB_PASS}@userinexperience-maztg.mongodb.net/test`);
 
