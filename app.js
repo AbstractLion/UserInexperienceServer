@@ -7,7 +7,7 @@ const to = require('await-to-js').default;
 
 mongoose.connect(`mongodb+srv://paranoia:${process.env.DB_PASS}@userinexperience-maztg.mongodb.net/test`);
 
-const User = require('models/User');
+const User = require('./models/User');
 
 app.get('/users', async (req, res) => {
   const [error, users] = await to(User.find({}).exec());
